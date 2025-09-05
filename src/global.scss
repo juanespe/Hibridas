@@ -1,0 +1,174 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+/*@import '@ionic/angular/css/palettes/dark.system.css';*/
+
+:root{
+    /*Colores principales del diseño*/
+    --primary-color: #223962;
+    --secondary-color: #27B0DC;
+    --background-color: #7289CD;
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --ligh-gray: #CCCCCC;
+    --ion-background-color: #4d4d4d;
+    --ion-text-color: #ffffff;
+
+    /*Fondo Personalizado*/
+    ion-content{
+        --background: var(--background-color);
+        --color: var(--white-color);
+    }
+
+    /*Contenedor centrado*/
+
+    .centered-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    }
+
+    /*Espaciado*/
+    --border-radius: 25px;
+    --border-radius-small: 15px;
+    --border-radius-large: 35px;
+    --shadow-color: rgba(83, 150, 250, 0.563);
+
+    /*Icono principal*/
+    .app-icon{
+        width: 120px;
+        height: 120px;
+        background: var(--primary-color);
+        border-radius: var(--border-radius);
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        justify-content: center;
+        position: relative;
+        box-shadow: 0 4px 20px var(--shadow-color);
+        overflow: hidden;
+        transition: all 0.3 ease;
+        z-index: 1;
+    }
+
+    :root {
+        --color-primary: #7289CD;
+        --color-secondary: #223962;
+        --color-accent: #27B0DC;
+        --color-white: #FFFFFF;
+        --color-black: #000000;
+    }
+
+
+    .logo-image{
+        width: 80px;
+        height: 800px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+        transition: all 0.3s ease;
+    }
+
+    .circle-accent{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 15px;
+        height: 15px;
+        background-color: var(--white-color);
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+
+    .app-name{
+        color: var(--white-color);
+        font-size: 40px;
+        font-weight: bold;
+        margin: 30px 0px 10px 0px;
+        text-align: center;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .user-name{
+        color: var(--white-color);
+        font-size: 20px;
+        font-weight: bold;
+        margin: 30px 0px 10px 0px;
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    /*Animacion basica*/
+
+    .pulse{
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(1.05);
+        }
+        100%{
+            transform: scale(1);
+        }
+        
+    }
+
+    /*Responsive design*/
+
+    @media (max-width: 480px){
+        .app-icon{
+            width: 100px;
+            height: 100px;
+        }
+        .app-name{
+            font-size: 28px;
+        }
+        .user-name{
+            font-size: 16px;
+        }
+    }
+
+}
