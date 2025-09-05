@@ -88,13 +88,65 @@
         z-index: 1;
     }
 
-    :root {
-        --color-primary: #7289CD;
-        --color-secondary: #223962;
-        --color-accent: #27B0DC;
-        --color-white: #FFFFFF;
-        --color-black: #000000;
+
+    
+    .home-content {
+  --background: var(--background-color);
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .splash-container {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+  }
+    .description {
+        margin-top: 100px;
+        color: #000000;
+
     }
+  .app-icon-home {
+    margin-top: -200px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    .app-icon {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .app-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-white);
+    margin-bottom: 15px;
+  }
+
+
+  .start-button {
+    margin-top: 100px;
+    --background: var(--white-color);
+    --color: var(--primary-color);
+    --border-radius: 9999px;
+    border-color: var(--primary-color);
+    font-weight: bold;
+
+    margin-bottom: 15px;
+  }
+
+  .register-link {
+
+    display: inline-block;
+    margin-top: 100px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
 
 
     .logo-image{
