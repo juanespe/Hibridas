@@ -3,6 +3,7 @@
     <ion-title>home</ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content class="home-content" fullscreen>
   <div class="splash-container centered-container fade-in-up">
 
@@ -13,14 +14,15 @@
     <h1 class="app-name">NombreDeLaApp</h1>
 
     <p class="description">
-      Inicia una nueva aventura con NombreDeLaApp<br> y descubre una nueva forma de ver el mundo
+      Inicia una nueva aventura con NombreDeLaApp<br>
+      y descubre una nueva forma de ver el mundo
     </p>
 
-    <ion-button expand="block" class="start-button">
+    <!-- Botón que redirige a login -->
+    <ion-button expand="block" class="start-button" (click)="goToLogin()">
       Comienza
     </ion-button>
 
     <a class="register-link" href="#">Regístrate</a>
-
   </div>
 </ion-content>

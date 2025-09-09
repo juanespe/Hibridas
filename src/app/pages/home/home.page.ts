@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { 
   IonContent, 
   IonHeader, 
@@ -8,6 +7,8 @@ import {
   IonToolbar, 
   IonButton   
 } from '@ionic/angular/standalone';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -24,11 +25,11 @@ import {
     FormsModule
   ]
 })
-export class HomePage implements OnInit {
+export class HomePage {
 
-  constructor() { }
+  constructor(private router: Router) {}
 
-  ngOnInit() {
+  goToLogin() {
+    this.router.navigate(['/login']); // 👈 redirige a login
   }
-
 }
