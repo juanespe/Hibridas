@@ -14,19 +14,30 @@
     </p>
 
     <!-- Inputs -->
-   <ion-item lines="none" class="input-field">
-  <img src="assets/images/usuario.png" alt="Usuario" class="input-img" slot="start" />
-  <ion-input placeholder="Usuario"></ion-input>
-</ion-item>
+    <ion-item lines="none" class="input-field">
+      <img src="assets/images/usuario.png" alt="Usuario" class="input-img" slot="start" />
+      <ion-input 
+        placeholder="Usuario" 
+        [(ngModel)]="usuario">
+      </ion-input>
+    </ion-item>
 
-<ion-item lines="none" class="input-field">
-  <img src="assets/images/clave.png" alt="Contraseña" class="input-img" slot="start" />
-  <ion-input type="password" placeholder="Contraseña"></ion-input>
-</ion-item>
-
+    <ion-item lines="none" class="input-field">
+      <img src="assets/images/clave.png" alt="Contraseña" class="input-img" slot="start" />
+      <ion-input 
+        type="password" 
+        placeholder="Contraseña" 
+        [(ngModel)]="contrasena">
+      </ion-input>
+    </ion-item>
 
     <!-- Botón ingresar -->
-    <ion-button expand="block" class="login-btn">Ingresar</ion-button>
+    <ion-button 
+      expand="block" 
+      class="login-btn" 
+      (click)="login()">
+      Ingresar
+    </ion-button>
 
     <!-- Recuperar contraseña -->
     <p class="forgot-pass">Recupera Tu Contraseña</p>
@@ -39,8 +50,9 @@
 
     <!-- Registro -->
     <p class="register-text">
-      No tienes cuenta?
-      <span class="register-link">Regístrate</span>
+      ¿No tienes cuenta?
+      <span class="register-link" (click)="goToRegister()">Regístrate</span>
     </p>
   </div>
+
 </ion-content>

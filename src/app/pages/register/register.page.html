@@ -1,0 +1,82 @@
+<ion-content class="register-container" [fullscreen]="true">
+  <div class="register-box">
+    <!-- Logo y nombre -->
+    <div class="logo-container">
+      <img src="assets/images/logo.png" alt="logo" class="app-logo" />
+      <h1 class="app-title">NombreDeLaApp</h1>
+    </div>
+
+    <!-- Subtítulo -->
+    <p class="subtitle">
+      Únete a la aventura,<br />
+      por favor regístrate
+    </p>
+
+    <!-- Inputs -->
+    <ion-item lines="none" class="input-field">
+      <ion-input 
+        placeholder="Nombre" 
+        [(ngModel)]="nombre" 
+        class="custom-input">
+      </ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="input-field">
+      <ion-input 
+        placeholder="Apellido" 
+        [(ngModel)]="apellido" 
+        class="custom-input">
+      </ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="input-field">
+      <ion-input 
+        placeholder="Correo" 
+        type="email" 
+        [(ngModel)]="correo" 
+        class="custom-input">
+      </ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="input-field">
+      <ion-input 
+        placeholder="Teléfono" 
+        type="tel" 
+        [(ngModel)]="telefono" 
+        class="custom-input">
+      </ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="input-field">
+      <ion-input 
+        placeholder="Contraseña" 
+        type="password" 
+        [(ngModel)]="contrasena" 
+        class="custom-input">
+      </ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="input-field">
+      <ion-input 
+        placeholder="Confirmar Contraseña" 
+        type="password" 
+        [(ngModel)]="confirmarContrasena" 
+        class="custom-input">
+      </ion-input>
+    </ion-item>
+
+    <!-- Botón de registro -->
+    <ion-button 
+      expand="full" 
+      class="register-btn" 
+      (click)="register()">
+      Registrarse
+    </ion-button>
+
+    <!-- Link a login -->
+    <p class="login-text">
+      ¿Ya tienes cuenta? 
+      <span class="login-link" (click)="goToLogin()">Inicia sesión</span>
+    </p>
+  </div>
+</ion-content>

@@ -139,12 +139,14 @@
 
 /* Inputs */
 ion-item.input-field {
-    margin-top: 70px;
-  --background: #ffffff;   /* 👈 Fondo blanco */
+  margin-top: 70px;
+  --background: #ffffff;   /* fondo blanco */
+  --color: #000000;        /* color del texto */
   border: 1px solid #000;
   border-radius: 8px;
   margin-bottom: 12px;
 }
+
 .input-img {
   width: 20px;   /* Ajusta tamaño */
   height: 20px;
@@ -355,5 +357,96 @@ ion-item.input-field {
             font-size: 16px;
         }
     }
+
+.register-container {
+  --background: #7289cd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-box {
+  background: transparent;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  overflow-y: visible; /* quita scroll */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+
+.app-logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.app-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.subtitle {
+  margin: 10px 0 20px;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+  color: black;
+}
+
+ion-item.input-field {
+  --background: #ffffff;
+  border: 1px solid #000;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  height: 40px; /* más pequeño */
+}
+
+.custom-input {
+  --background: #ffffff;
+  --border-radius: 9999px;
+  --padding-start: 10px;
+  height: 35px; /* más pequeño */
+  font-size: 14px;
+  color: #000;
+}
+
+.register-btn {
+  --background: white;
+  --color: black;
+  border-radius: 20px;
+  border: 1px solid black;
+  margin-top: 15px;
+  font-weight: bold;
+  width: 100%;
+  max-width: 250px;
+  height: 40px;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.login-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: black;
+}
+
+.login-link {
+  color: #00d9ff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 
 }
